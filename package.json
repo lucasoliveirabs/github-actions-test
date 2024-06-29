@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/lucasoliveirabs/github-actions-test/issues"
   },
-  "homepage": "https://github.com/lucasoliveirabs/github-actions-test#readme"
+  "homepage": "https://github.com/lucasoliveirabs/github-actions-test#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
 }
