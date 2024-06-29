@@ -3,8 +3,9 @@ name: Deploy Node.js Backend Image to Docker Hub and AWS ECS
 on:
   push:
     branches:
-      - dev
-      - main
+      - 'main'
+    tags:
+      - 'v*.*.*'
 
 jobs:
   deploy:
@@ -24,6 +25,4 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: |
-            lucasoliveirabs/githubactionstest:latest
-            lucasoliveirabs/githubactionstest:${{ github.ref_name }}
+          tags: lucasoliveirabs/githubactionstest:${{ github.ref_name }}
